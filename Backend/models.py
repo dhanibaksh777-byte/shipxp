@@ -9,7 +9,7 @@ import uuid
 class User(base):
     __tablename__ = "users"
     id = Column(UUID(as_uuid = True),primary_key=True,default = uuid.uuid4)
-    github_username = Column(String(500),unique=True,nullable=False)
+    github_username = Column(String(39),unique=True,nullable=False)
     hashed_password = Column(String,nullable=False)
     xp = Column(Integer,default=0,nullable=False)
 
